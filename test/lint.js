@@ -29,6 +29,8 @@ function load(...files) {
         console.log(relativeFilePath);
         if (file.indexOf('browsers' + path.sep) !== -1) {
           hasSchemaErrors = testSchema(file, './../schemas/browsers.schema.json');
+        } else if (file.indexOf('devices' + path.sep) !== -1) {
+          hasSchemaErrors = testSchema(file, './../schemas/assistive-devices.schema.json');
         } else {
           hasSchemaErrors = testSchema(file);
           hasStyleErrors = testStyle(file);
@@ -58,6 +60,7 @@ if (process.argv[2]) {
     'api',
     'browsers',
     'css',
+    'devices',
     'html',
     'http',
     'svg',

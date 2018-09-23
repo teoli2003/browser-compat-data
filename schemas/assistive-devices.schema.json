@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+
+  "definitions": {
+
+    "devices": {
+      "type": "object",
+      "properties": {
+        "jaws": { "$ref": "#/definitions/device_statement" },
+        "nvda": { "$ref": "#/definitions/device_statement" },
+        "voiceover": { "$ref": "#/definitions/device_statement" }
+      },
+      "additionalProperties": false
+    },
+
+    "device_statement": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "releases": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/definitions/release_statement" }
+        }
+      },
+      "required": ["name", "releases"],
+      "additionalProperties": false
+    },
+
+    "release_statement": {
+      "type": "object",
+      "properties": {
+        "release_date": { "type": "string", "format": "date" },
+        "release_notes": { "type": "string", "format": "uri" },
+        "status": {
+          "type": "string",
+          "enum": ["retired", "current", "exclusive", "beta", "nightly", "esr", "planned"]
+        }
+      },
+      "additionalProperties": false
+    }
+
+  },
+
+  "type": "object",
+    "properties": {
+      "devices": { "$ref": "#/definitions/devices" }
+    },
+    "additionalProperties": false
+}

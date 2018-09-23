@@ -39,6 +39,8 @@ JSON file containing the compatibility data.
 
 - [api/](https://github.com/mdn/browser-compat-data/tree/master/api) contains data for each [Web API](https://developer.mozilla.org/en-US/docs/Web/API) interface.
 
+- [a11y](https://github.com/mdn/browser-compat-data/tree/master/a11y) contains specific accessibility compatibility information.
+
 - [css/](https://github.com/mdn/browser-compat-data/tree/master/css) contains data for [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) properties, selectors, and at-rules.
 
 - [html/](https://github.com/mdn/browser-compat-data/tree/master/html) contains data for

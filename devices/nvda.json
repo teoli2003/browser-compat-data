@@ -1,0 +1,21 @@
+{
+  "devices": {
+    "nvda": {
+      "name": "NVDA",
+      "releases": {
+        "2018.1": {
+          "release_date": "2018-03-08",
+          "status": "retired"
+        },
+        "2018.2.1": {
+          "release_date": "2018-06-13",
+          "status": "retired"
+        },
+        "2018.3.1": {
+          "release_date": "2018-09-18",
+          "status": "current"
+        }
+      }
+    }
+  }
+}
